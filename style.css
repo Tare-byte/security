@@ -13,6 +13,8 @@
      background: #777;
      height: 2.8rem;
      padding: .5rem 0;
+     position: fixed;
+     width: 100%;
 
  }
 .top-bar a{
@@ -57,4 +59,9 @@
   .topnav .icon {
     display: none;
   }
+.content-text{
+  text-align: center;
+  padding: 5em;
+  color: white;
+}
    
