@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,18 +9,49 @@
     <style>
         body {
             padding: 25px;
+            background-image: url(./imgseq/carousel2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            position: relative;
         }
-    </style>
+   .form {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    float: none; 
+   }
+
+
+
+/* input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; */
+
+
+</style>
 </head>
 <body>
 
     <div class="form">
+    <form  method="POST">
     <label for="username">Username:</label><br>
     <input type="text" id="username" name="username" autofocus><br>
     <label for="password">Password:</label><br>
     <input type="password" id="password" name="password"><br>
     <br>
-    <input type="button" value="submit">
+   <a href="mailto:taremichaels22@gmail.com"><input type="button" value="submit"></a>
+    </form>
     </div>
 
     
