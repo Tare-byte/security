@@ -1,59 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./forms1.css">
-    <title>Log In</title>
+    <title>Login</title>
+
     <style>
-        body {
-            padding: 25px;
-            background-image: url(./imgseq/carousel2.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 100vh;
-            position: relative;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-   .form {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    float: none; 
-   }
 
+        body {
+            width: 100%;
+            height: 100vh;
+            background: url(./imgseq/carousel2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: grid;
+            backdrop-filter: grayscale(0.2);
+        }
 
+        .form {
+            width: 25%;
+            height: 60vh;
+            border: solid 1px white;
+            border-radius: 10px;
+            background: linear-gradient(to bottom right, rgba(0, 145, 255, 0.1), rgba(255, 255, 255, 0.2));
+            backdrop-filter: blur(4);
+            display: grid;
+            align-self: center;
+            justify-self: center;
+        }
 
-/* input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer; */
+        form {
+            width: 90%;
+            height: 90%;
+            display: grid;
+            align-self: center;
+            justify-self: center;
+            backdrop-filter: blur(6);
+        }
 
+        form label {
+            font-size: 16px;
+            align-self: flex-end;
+            padding-left: 12px;
+        }
 
-</style>
+        .formInput {
+            height: 40px;
+            align-self: center;
+            border: none;   
+            border-radius: 6px;
+            outline: none;
+            padding: 15px;
+        }
+
+        #lp {
+            grid-row: 4/5;
+        }
+
+        #username {
+            grid-row: 2/4;
+        }
+
+        #password {
+            grid-row: 5/7;
+        }
+
+        a {
+            grid-row: 8/9;
+        }
+
+        a input {
+            background: rgba(0, 0, 255, 0.8);
+            padding: 5px;
+            border: none;
+            color: white;
+        }
+
+        p {
+            grid-row: 9;
+        }
+        
+    </style>
+
 </head>
 <body>
-
     <div class="form">
-    <form  method="POST">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" autofocus><br>
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br>
-    <br>
-   <a href="mailto:taremichaels22@gmail.com"><input type="button" value="submit"></a>
-    </form>
+        <form  method="POST">
+        <label id="lu" for="username">Username:</label><br>
+        <input class="formInput" type="text" id="username" name="username" autofocus><br>
+        <label id="lp" for="password">Password:</label><br>
+        <input class="formInput" type="password" id="password" name="password"><br>
+       <a href="mailto:taremichaels22@gmail.com"><input type="button" value="submit"></a>
+       <p>Dont have an Account yet? <a href="./forms2.html">Sign up</a></p>
+        </form>
     </div>
-
-    
 </body>
 </html>

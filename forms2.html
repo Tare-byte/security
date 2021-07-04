@@ -6,85 +6,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
 <style>
-    body{
+    * {
         margin: 0;
-        padding:0;
-        background-image: url(./imgseq/carousel5.jpg)
+        padding: 0;
+        box-sizing: border-box;
     }
-    
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background: url(./imgseq/carousel1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+    }
+
+    .form {
+        align-self: center;
+        justify-self: center;
+        width: 25%;
+        height: 74vh;
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.611), rgba(255, 255, 255, 0.2));
+        border: solid 1px white;
+        border-radius: 15px;
+        display: grid;
+    }
+
+    form {
+        width: 90%;
+        height: 90%;
+        align-self: center;
+        justify-self: center;
+        padding-left: 10px;
+    }
+
+    div {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .st {
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .st input {
+        border: none;
+        margin-right: 10px;
+    }
+
+    .sign {
+        padding-top: 10px;
+    }
+
+    input {
+        height: 20px;
+        border: none;   
+        border-radius: 6px;
+        outline: none;
+        padding: 15px;
+    }
+
+    select {
+        height: 20px;
+        border: none;   
+        border-radius: 6px;
+        outline: none;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    a input {
+        height: 10px;
+        border: none;   
+        border-radius: 6px;
+        outline: none;
+        padding: 5px 3px 16px;
+        margin: 2px;
+        background: rgba(121, 121, 197, 0.8);
+        color: white;
+        text-align: center;
+    }
+    .sign{
+        text-decoration: none;
+    }
 </style>
 
 </head>
 <body>
 <div class="form">
-<form method="POST"> 
-<label for="name">NAME:</label>
-<input type="text" id="name" placeholder="your name....."><br>
-<br>
-<label for="email">EMAIL:</label>
-<input type="email" id="email" placeholder="@gmail.com"><br>
-<br>
-<label for="phone number">PHONE NUMBER:</label>
-<input type="tel" id="phone number" placeholder="+234-"><br>
-<br>
-<label for="male">Male:</label>
-<input type="radio" id="male" name="gender" value="male">
-<label for="female">Female:</label>
-<input type="radio" id="female" name="gender" value="female">
-<label for="others">Others:</label>
-<input type="radio" id="others" name="gender" value="others"><br>
-<br>
-<label for="date">DOB:</label>
-<input type="date" id="date" name="date"><br>
-<br>
-<p>
-<label for="state">State of Origin:</label>
-<select id="state" name="state">
-    <option value="abia">Abia</option>
-    <option value="adamawa">Adamawa</option>
-    <option value="akwa ibom">Akwa Ibom</option>
-    <option value="anambra">Anambra</option>
-    <option value="bauchi">Bauchi</option>
-    <option value="bayelsa">Bayelsa</option>
-    <option value="benue">Benue</option>
-    <option value="borno">Borno</option>
-    <option value="cross-river">Cross-River</option>
-    <option value="delta">Delta</option><br>
-</select>
-</p>
-<br>
-<label for="preferred-language">Preferred Language:</label>
-<select name="language" id="language">
-    <option value="english">English</option>
-    <option value="Igbo">Igbo</option>
-    <option value="yoruba">Yoruba</option>
-    <option value="hausa">Hausa</option>
-    <option value="dutch">Dutch</option>
-    <option value="french">French</option>
-    <option value="russian">Russian</option>
-    <option value="malay">Malay</option>
-    <option value="others">Others</option>
-</select>
-<br>
-<p>
-<label for="nationality">Nationality:</label>
-<select id="nationality" name="nationality">
-    <option value="nigeria">Nigeria</option>
-    <option value="ghana">Ghana</option>
-    <option value="malaysia">Malaysia</option>
-    <option value="togo">Togo</option>
-    <option value="chad">Chad</option>
-    <option value="benin-republic">Benin-republic</option>
-    <option value="united-kingdom">United Kingdom</option>
-    <option value="north-korea">North Korea</option>
-    <option value="mexico">Mexico</option>
-    </select><br>
-    </p>
+    <form method="POST"> 
+        <div> 
+            <label for="name">NAME:</label>
+            <input type="text" id="name" placeholder="your name...">
+        </div>
+        <div>
+            <label for="email">EMAIL:</label>
+            <input type="email" id="email" placeholder="@gmail.com">
+        </div>
+        <div>
+            <label for="phone number">PHONE NUMBER:</label>
+            <input type="tel" id="phone number" placeholder="+234-"><br>
+        </div>
+        <div class="st">
+            <label for="male">Male:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">Female:</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="others">Others:</label>
+            <input type="radio" id="others" name="gender" value="others">
+        </div>
+        <div>
+            <label for="date">DOB:</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <div>
+            <p>
+                <label for="state">State of Origin:</label>
+                <select id="state" name="state">
+                    <option value="abia">Abia</option>
+                    <option value="adamawa">Adamawa</option>
+                    <option value="akwa ibom">Akwa Ibom</option>
+                    <option value="anambra">Anambra</option>
+                    <option value="bauchi">Bauchi</option>
+                    <option value="bayelsa">Bayelsa</option>
+                    <option value="benue">Benue</option>
+                    <option value="borno">Borno</option>
+                    <option value="cross-river">Cross-River</option>
+                    <option value="delta">Delta</option><br>
+                </select>
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for="nationality">Nationality:</label>
+                <select id="nationality" name="nationality">
+                    <option value="nigeria">Nigeria</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="malaysia">Malaysia</option>
+                    <option value="togo">Togo</option>
+                    <option value="chad">Chad</option>
+                    <option value="benin-republic">Benin-republic</option>
+                    <option value="united-kingdom">United Kingdom</option>
+                    <option value="north-korea">North Korea</option>
+                    <option value="mexico">Mexico</option>
+                    </select><br>
+                    </p>
+            
+        </div>
+    
+    <a href="mailto:taremichaels22@gmail.com"><input type="submit" value="submit"></a>
 
-<br>
-<a href="mailto:taremichaels22@gmail.com"><input type="submit" value="submit"></a>
-
-
+    <p class="sign">Already have an Account?<a href="./forms1.html">Sign in</a></p>
 
 </form>
 </div>
